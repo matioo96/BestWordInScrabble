@@ -1,0 +1,398 @@
+﻿<Window x:Class="BestWordInScrabble.Views.MainWindowView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BestWordInScrabble"
+        mc:Ignorable="d"
+        Height="570" Width="800" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True">
+    <Grid>
+        <Image Source="/Images/scrabble_background.jpg" Stretch="Fill"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Name="btnToggle" Height="40" Width="Auto" Style="{StaticResource btnStyle}" Margin="0"
+                        PreviewMouseMove="btnToggle_PreviewMouseMove" PreviewMouseLeftButtonDown="btnToggle_PreviewMouseLeftButtonDown"/>
+                <Button Grid.Column="1" Command="{Binding ExitCommand}" Height="40" Width="40" Style="{StaticResource btnStyle}" Margin="0">
+                    <StackPanel>
+                        <Image Source="/Images/close_button.png"/>
+                    </StackPanel>
+                </Button>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button
+                    Name="A"
+                    Content="A"
+                    Grid.Column="0"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=A}"/>
+                <Button
+                    Name="Ą"
+                    Content="Ą"
+                    Grid.Column="1"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=Ą}"/>
+                <Button
+                    Name="B"
+                    Content="B"
+                    Grid.Column="2"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=B}"/>
+                <Button
+                    Name="C"
+                    Content="C"
+                    Grid.Column="3"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=C}"/>
+                <Button
+                    Name="Ć"
+                    Content="Ć"
+                    Grid.Column="4"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=Ć}"/>
+                <Button
+                    Name="D"
+                    Content="D"
+                    Grid.Column="5"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=D}"/>
+                <Button
+                    Name="E"
+                    Content="E"
+                    Grid.Column="6"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=E}"/>
+                <Button
+                    Name="Ę"
+                    Content="Ę"
+                    Grid.Column="7"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=Ę}"/>
+                <Button
+                    Name="F"
+                    Content="F"
+                    Grid.Column="8"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=F}"/>
+                <Button
+                    Name="G"
+                    Content="G"
+                    Grid.Column="9"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=G}"/>
+                <Button
+                    Name="H"
+                    Content="H"
+                    Grid.Column="10"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=H}"/>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button
+                    Name="I"
+                    Content="I"
+                    Grid.Column="0"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=I}"/>
+                <Button
+                    Name="J"
+                    Content="J"
+                    Grid.Column="1"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=J}"/>
+                <Button
+                    Name="K"
+                    Content="K"
+                    Grid.Column="2"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=K}"/>
+                <Button
+                    Name="L"
+                    Content="L"
+                    Grid.Column="3"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=L}"/>
+                <Button
+                    Name="Ł"
+                    Content="Ł"
+                    Grid.Column="4"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=Ł}"/>
+                <Button
+                    Name="M"
+                    Content="M"
+                    Grid.Column="5"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=M}"/>
+                <Button
+                    Name="N"
+                    Content="N"
+                    Grid.Column="6"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=N}"/>
+                <Button
+                    Name="Ń"
+                    Content="Ń"
+                    Grid.Column="7"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=Ń}"/>
+                <Button
+                    Name="O"
+                    Content="O"
+                    Grid.Column="8"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=O}"/>
+                <Button
+                    Name="Ó"
+                    Content="Ó"
+                    Grid.Column="9"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=Ó}"/>
+                <Button
+                    Name="P"
+                    Content="P"
+                    Grid.Column="10"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=P}"/>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button
+                    Name="R"
+                    Content="R"
+                    Grid.Column="0"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=R}"/>
+                <Button
+                    Name="S"
+                    Content="S"
+                    Grid.Column="1"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=S}"/>
+                <Button
+                    Name="Ś"
+                    Content="Ś"
+                    Grid.Column="2"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=Ś}"/>
+                <Button
+                    Name="T"
+                    Content="T"
+                    Grid.Column="3"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=T}"/>
+                <Button
+                    Name="U"
+                    Content="U"
+                    Grid.Column="4"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=U}"/>
+                <Button
+                    Name="W"
+                    Content="W"
+                    Grid.Column="5"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=W}"/>
+                <Button
+                    Name="Y"
+                    Content="Y"
+                    Grid.Column="6"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=Y}"/>
+                <Button
+                    Name="Z"
+                    Content="Z"
+                    Grid.Column="7"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=Z}"/>
+                <Button
+                    Name="Ż"
+                    Content="Ż"
+                    Grid.Column="8"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=Ż}"/>
+                <Button
+                    Name="Ź"
+                    Content="Ź"
+                    Grid.Column="9"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=Ź}"/>
+                <Button
+                    Name="Empty"
+                    Content=" "
+                    Grid.Column="10"
+                    Style="{StaticResource btnStyle}"
+                    Command="{Binding AddLetterCommand}"
+                    CommandParameter="{Binding ElementName=Empty}"/>
+            </Grid>
+            <Button Grid.Row="4" Content="Wybrane litery" Width="250" IsEnabled="False" Margin="0, 25, 0, 0" Style="{StaticResource btnStyle}"/>
+            <Grid Grid.Row="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button
+                    Content="{Binding SelectedLetter1}"
+                    IsEnabled="False"
+                    Grid.Column="0"
+                    Style="{StaticResource btnStyle}"/>
+                <Button
+                    Content="{Binding SelectedLetter2}"
+                    IsEnabled="False"
+                    Grid.Column="1"
+                    Style="{StaticResource btnStyle}"/>
+                <Button
+                    Content="{Binding SelectedLetter3}"
+                    IsEnabled="False"
+                    Grid.Column="2"
+                    Style="{StaticResource btnStyle}"/>
+                <Button
+                    Content="{Binding SelectedLetter4}"
+                    IsEnabled="False"
+                    Grid.Column="3"
+                    Style="{StaticResource btnStyle}"/>
+                <Button
+                    Content="{Binding SelectedLetter5}"
+                    IsEnabled="False"
+                    Grid.Column="4"
+                    Style="{StaticResource btnStyle}"/>
+                <Button
+                    Content="{Binding SelectedLetter6}"
+                    IsEnabled="False"
+                    Grid.Column="5"
+                    Style="{StaticResource btnStyle}"/>
+                <Button
+                    Content="{Binding SelectedLetter7}"
+                    IsEnabled="False"
+                    Grid.Column="6"
+                    Style="{StaticResource btnStyle}"/>
+                <Button
+                    Content="{Binding SelectedLetter8}"
+                    IsEnabled="False"
+                    Grid.Column="7"
+                    Style="{StaticResource btnStyle}"/>
+                <Button
+                    Content="{Binding SelectedLetter9}"
+                    IsEnabled="False"
+                    Grid.Column="8"
+                    Style="{StaticResource btnStyle}"/>
+            </Grid>
+            <Button
+                Grid.Row="6"
+                Name="BestWord1"
+                Content="{Binding BestWord1}"
+                Command="{Binding BestWordCommand}"
+                CommandParameter="{Binding ElementName=BestWord1}"
+                Width="350"
+                Margin="0, 25, 0, 0"
+                Style="{StaticResource btnStyle}"/>
+            <Button
+                Grid.Row="7"
+                Name="BestWord2"
+                Content="{Binding BestWord2}"
+                Command="{Binding BestWordCommand}"
+                CommandParameter="{Binding ElementName=BestWord2}"
+                Width="350"
+                Style="{StaticResource btnStyle}"/>
+            <Button
+                Grid.Row="8"
+                Name="BestWord3"
+                Content="{Binding BestWord3}"
+                Command="{Binding BestWordCommand}"
+                CommandParameter="{Binding ElementName=BestWord3}"
+                Width="350"
+                Style="{StaticResource btnStyle}"/>
+        </Grid>
+    </Grid>
+</Window>
